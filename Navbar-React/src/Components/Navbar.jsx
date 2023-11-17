@@ -16,9 +16,9 @@ const Navbar = () => {
             <img src={ logo } alt="Logo" />
             <p>NavBar</p>
         </div>
-        <div className="container_navbar--links">
-            <button ><img src={ Menu } alt="menu" /></button>
-            <ul>
+        <div className={`container_navbar--links ${menu ? 'open' : ''}`}>
+            <button onClick={toggleMenu} ><img src={ Menu } alt="menu" /></button>
+            <ul className={`nav-list ${menu ? 'show' : ''}`}>
                 <li>Inicio</li>
                 <li>Productos</li>
                 <li>Contacto</li>
